@@ -7,12 +7,10 @@ document.querySelector(".button-container")
     })
 })
 
-function getJobs(){
-    return fetch("data.json")
-    .then(response => response.json())
-    .then(data => {
-        return data
-    })
+async function getJobs(){
+    const response = await fetch("data.json");
+    const data = await response.json();
+    return data;
 }
 
 function filterJobs(jobs, searchText){
@@ -35,6 +33,7 @@ function filterJobs(jobs, searchText){
 
 function showJobs(jobs){
     let jobsContainer = document.querySelector(".jobs-container");
+    let jobsLength = document.querySelector(".jobs-length");
     let jobsHTML = "";
     jobs.forEach(job => {
         jobsHTML += `
@@ -60,6 +59,9 @@ function showJobs(jobs){
             </div>
         `
     })
+    jobsLength.innerHTML = `
+                            <h1>Showing ${jobs.length} Jobs</h1>
+                            `
     jobsContainer.innerHTML = jobsHTML;
 }
 
