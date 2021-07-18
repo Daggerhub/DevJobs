@@ -1,6 +1,7 @@
 body{
     font-family:'Times New Roman', Times, serif;
     margin: 0;
+    color: white;
     background: #11121A;
 }
 
@@ -28,4 +29,55 @@ header{
 
 .header-container .logo img {
     height: 100%;
+}
+
+.search {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 10px 25px;
+}
+
+.search-container {
+    background-color: #1C1C24;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid #222328;
+    display: flex;
+    overflow: hidden;
+}
+
+.input-container {    
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.input-container i {
+    font-size: 20px;
+    margin-left: 25px;
+}
+
+.button-container {
+    background: #3060FF;
+    width: 100px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.button-container:hover {
+    background: #5a81ff;
 }
